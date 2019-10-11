@@ -20,13 +20,26 @@ require(['jquery'],function($){
 		  });
 
 		//cambiar fondo en las paginas de productos
-		if(window.location.pathname.includes('mujer') || window.location.pathname.includes('hombre') || window.location.pathname.includes('catalog')){
+		if(window.location.pathname.includes('mujer') || window.location.pathname.includes('hombre') || window.location.pathname.includes('men') || window.location.pathname.includes('women') || window.location.pathname.includes('catalog')){
 			$(".column.main").css("background-color","#f5f1eb");
 			$(".page-main").css("background-color","#f5f1eb");
 		} else {
 			$(".page-main").css("background-color","white");
 			$(".column.main").css("background-color","white");
 		}
+
+		
+		//cambiar apariencia en las paginas de checkout
+		if(window.location.pathname.includes('checkout') ){
+			$(".page-main").css("max-width","100%");
+			$(".page-main").css("padding-left"," 0 ");
+			$(".page-main").css("padding-right"," 0");
+		} else {
+			$(".page-main").css("max-width"," 100% !important;");
+			$(".page-main").css("padding-left"," 0 !important");
+			$(".page-main").css("padding-right"," 0 !important");
+		}
+
 	});
 });	
 
